@@ -1,0 +1,60 @@
+.contact {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+      font-size: 70px;
+      line-height: 66px;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    .mailSvg{
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 10px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        text-wrap: 500px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
