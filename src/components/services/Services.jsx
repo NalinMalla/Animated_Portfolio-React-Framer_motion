@@ -107,7 +107,7 @@ const Services = () => {
             odio repellat quod!
           </p>
           <button>Go</button>
-        </motion.div>
+        </motion.div> 
       </motion.div>
     </motion.div>
   );

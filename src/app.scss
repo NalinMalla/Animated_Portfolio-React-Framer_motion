@@ -1,26 +1,44 @@
-html{
+html {
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;  //for smooth scroll animation
+  scroll-behavior: smooth; //for smooth scroll animation
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-body{
+body {
   background-color: #0c0c1d;
-  color: lightgray
+  color: lightgray;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-section{
+section {
   height: 100vh;
-  scroll-snap-align: center;  //causes page to snap to this section
+  scroll-snap-align: center; //causes page to snap to this section
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
 }

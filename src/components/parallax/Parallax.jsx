@@ -12,16 +12,11 @@ const Parallax = ({ type }) => {
 
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]); //When scrollYProgress == 0 then yBg == 0%.
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
-  
-  // console.log(type +" scrollYProgress : ", yBg)
-
-  // window.addEventListener('scroll', ()=>{
-  //   console.log(window.scrollY);
-  // })
 
   return (
     <div
       className="parallax"
+      ref={ref}   //Without this the parallax effect for all objects of this component will use the same ref i.e. move together.
       style={{
         background:
           type === "services"
